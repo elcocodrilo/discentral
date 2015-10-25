@@ -1,0 +1,27 @@
+
+#background{
+  position:absolute;
+  top:0;
+  z-index:-1;
+}
+
+body{
+  background:silver;
+}
+
+.textbox,
+#mainform{
+  background:rgba(255, 255, 255, 0.7);
+  padding:3em;
+  margin-top:3em;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  clear:both;
+}
+
+.note{
+  background:rgba(255,255,255,.666);
+  padding:3em;
+  border-radius: 10%;
+}
