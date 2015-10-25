@@ -28,7 +28,8 @@
     "gulp-minify-css": "^1.2.1"
   },
   "scripts": {
-    "compile": "./compile.sh"
+    "compile": "./compile.sh",
+    "radio": "./.home"
   },
   "repository": {
     "type": "git",

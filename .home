@@ -1,0 +1,3 @@
+#!/bin/bash
+#vlc http://streaming.radio.co/sd90faa8df/listen --intf dummy --sout Music/`date +%N` &
+vlc http://streaming.radio.co/sd90faa8df/listen --intf dummy &
