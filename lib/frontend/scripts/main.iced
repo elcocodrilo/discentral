@@ -1,8 +1,13 @@
-$ = require 'jquery'
-request = require 'superagent' #ajax with less suck
+io = require 'socket.io'
+socket = io()
 
-# We listen for a submition event on the form then prevent
-# the default and do our own thing.
+$ = require 'jquery' # to insert to dom
+request = require 'superagent' # to internet
+
+insertMessage = (message)->
+  $('.chatbox').prepend message
+socket.on 'chat message', (msg)->
+  insertMessage msg
 
 
 $('form').on 'submit', (e)->

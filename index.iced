@@ -4,6 +4,8 @@ config = require 'config'
 # express application
 express = require 'express'
 app = express()
+http = require('http').Server(app)
+io = require('socket.io')(http)
 
 # express middleware modules
 bodyParser  = require 'body-parser'
@@ -62,8 +64,14 @@ mongo.connect (config.get 'db'), (database_error,db)->
   app.get '/' , (req,res)->
     res.send index()
 
+# Sockets
+  io.on 'connection', (socket)->
+    socket.on 'chat message', (msg)->
+      io.emit 'chat message', msg
+      console.log 'chat ', msg
+
 # start
-  app.listen (port=config.get 'port'), ()->
+  http.listen (port=config.get 'port'), ()->
     log.info "http://localhost:#{port}"
 
   module.exports = app
