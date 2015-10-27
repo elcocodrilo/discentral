@@ -23,11 +23,40 @@ $('form').on 'submit', (e)->
 $('.fiat').hover ()->
 # mouse enter
   $(@).append """
-    <h6>
-      A formal authorization or proposition; a decree: adopting a legislative review program, rather than trying to regulate by fiat
-    </h6>
-""",
+  <div class="fiatbox">
+    <h3>
+    fi·at mon·ey
+    </h3>
+
+    <p>
+      <i> noun ~</i>
+        inconvertible paper money made legal tender by a government decree.
+    </p>
+  </div>
+    """
+,
 # mouse leave
   ()->
     $(@).empty()
-    $(@).append 'fiat.'
+    $(@).append 'fiat money.'
+
+
+$('.premise').hover ()->
+# mouse enter
+  $(@).append """
+  <div class="premisebox">
+    <h3>
+      prem·ise
+    </h3>
+
+    <p>
+      <i> noun ~</i>
+        A premise is a statement that will induce or justify a conclusion. In other words: a premise is an assumption that something is true.
+    </p>
+  </div>
+    """
+,
+# mouse leave
+  ()->
+    $(@).empty()
+    $(@).append 'Premise:'

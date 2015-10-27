@@ -1,114 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   version="1.2"
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 744.09449 1052.3622"
-   id="svg2">
-  <defs
-     id="defs4">
-    <marker
-       refX="0"
-       refY="0"
-       orient="auto"
-       id="Arrow1Send"
-       style="overflow:visible">
-      <path
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
-         id="path3850"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt" />
-    </marker>
-    <marker
-       refX="0"
-       refY="0"
-       orient="auto"
-       id="Arrow1Mstart"
-       style="overflow:visible">
-      <path
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         transform="matrix(0.4,0,0,0.4,4,0)"
-         id="path3841"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt" />
-    </marker>
-    <marker
-       refX="0"
-       refY="0"
-       orient="auto"
-       id="Arrow1Lend"
-       style="overflow:visible">
-      <path
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         transform="matrix(-0.8,0,0,-0.8,-10,0)"
-         id="path3838"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt" />
-    </marker>
-    <marker
-       refX="0"
-       refY="0"
-       orient="auto"
-       id="Arrow1Lstart"
-       style="overflow:visible">
-      <path
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         transform="matrix(0.8,0,0,0.8,10,0)"
-         id="path3835"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt" />
-    </marker>
-    <filter
-       x="-0.11889567"
-       y="-0.13049731"
-       width="1.2377913"
-       height="1.2609946"
-       color-interpolation-filters="sRGB"
-       id="filter5781">
-      <feGaussianBlur
-         id="feGaussianBlur5783"
-         stdDeviation="30.499866" />
-    </filter>
-  </defs>
-  <metadata
-     id="metadata7">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <text
-     x="1.0527676"
-     y="777.87042"
-     transform="scale(0.98062694,1.0197558)"
-     id="text3014"
-     xml:space="preserve"
-     style="font-size:304.79745483px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
-       x="1.0527676"
-       y="777.87042"
-       id="tspan3016">D</tspan></text>
-  <text
-     x="74.341606"
-     y="913.98242"
-     transform="scale(1.2994934,0.76953065)"
-     id="text3018"
-     xml:space="preserve"
-     style="font-size:91.17455292px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
-       x="74.341606"
-       y="913.98242"
-       id="tspan3020">i</tspan></text>
-  <path
-     d="M 553.50373,81.086532 430.17249,52.248503 570.15686,59.147736 469.21765,-17.36045 594.29356,45.879086 533.19969,-65.070296 621.74039,43.574854 611.05553,-82.631569 647.75152,52.633461 689.3232,-67.007765 667.82941,71.488592 754.4695,-20.900383 678.5024,96.880023 795.23004,47.718194 677.92503,124.41735 l 126.63193,2.56584 -138.35981,22.35592 114.64039,53.84985 -135.49094,-35.85285 82.8265,95.82274 -109.19447,-87.86235 36.69115,121.22701 -64.01727,-124.67964 -15.78843,125.67001 -7.77091,-139.93869 -65.53805,108.38355 49.81912,-131.00107 -103.95555,72.35656 98.79496,-99.41217 -124.39818,23.81848 z"
-     transform="translate(-47.594273,84.612037)"
-     id="path3898"
-     style="fill:#000000;fill-opacity:1;stroke:#f4821c;stroke-width:9.2130003;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:26.89999962;stroke-opacity:1;stroke-dasharray:9.21300015, 442.2240073;stroke-dashoffset:0" />
+<svg id="svg2" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" sodipodi:docname="bg.svg" height="297mm" width="210mm" version="1.2" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" inkscape:version="0.48.4 r9939" viewBox="0 0 744.09449 1052.3622" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd">
+<sodipodi:namedview id="namedview3003" bordercolor="#666666" inkscape:pageshadow="2" guidetolerance="10" pagecolor="#ffffff" gridtolerance="10" inkscape:window-maximized="1" inkscape:zoom="0.56729519" objecttolerance="10" borderopacity="1" inkscape:current-layer="svg2" inkscape:cx="61.803114" inkscape:cy="526.18109" inkscape:window-y="24" inkscape:window-x="57" inkscape:window-width="1309" showgrid="false" inkscape:pageopacity="0" inkscape:window-height="744"/>
+<defs id="defs4"></defs>
+<metadata id="metadata7">
+<rdf:RDF>
+<cc:Work rdf:about="">
+<dc:format>image/svg+xml</dc:format>
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+<dc:title/>
+</cc:Work>
+</rdf:RDF>
+</metadata>
+<text id="text3014" style="letter-spacing:0px;word-spacing:0px;" font-weight="normal" xml:space="preserve" transform="scale(0.98062694,1.0197558)" line-height="125%" sodipodi:linespacing="125%" font-size="304.79745483px" font-style="normal" y="777.87042" x="1.0527676" font-family="Sans" fill="#000000"><tspan id="tspan3016" y="777.87042" x="1.0527676">D</tspan></text>
+<text id="text3018" style="letter-spacing:0px;word-spacing:0px;" font-weight="normal" xml:space="preserve" transform="scale(1.2994934,0.76953065)" line-height="125%" sodipodi:linespacing="125%" font-size="91.17455292px" font-style="normal" y="913.98242" x="74.341606" font-family="Sans" fill="#000000"><tspan id="tspan3020" y="913.98242" x="74.341606">i</tspan></text>
+<path id="welcomestar" stroke-linejoin="round" d="M553.5,81.087,430.17,52.249,550.77,53.859,469.22-17.36,594.29,45.879,533.2-65.07,607.64,25.947,611.06-82.632,647.75,24.429,689.32-67.008,681.93,53.861,754.47-20.9,678.5,96.88,795.23,47.718,677.93,124.42l126.63,2.5658-97.817,22.356,74.097,53.85-137.25-48.192,84.589,108.16-109.19-87.862,52.556,188.21-64.017-124.68-31.653,115.09-7.7709-196.35-65.538,108.38,49.819-131-103.96,72.357,68.828-87.073-94.431,11.479z" sodipodi:nodetypes="ccccccccccccccccccccccccccccccc" stroke-dashoffset="0" inkscape:connector-curvature="0" transform="translate(-47.594273,84.612037)" stroke="#f4821c" stroke-linecap="round" stroke-miterlimit="26.89999962" stroke-dasharray="9.21300015, 442.2240073" stroke-width="9.2130003" inkscape:label="welcomestar" fill="#000">
+<title id="title3836">welcomestar</title>
+</path>
 </svg>

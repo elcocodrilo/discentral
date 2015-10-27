@@ -1,4 +1,3 @@
-
 #background{
   position:absolute;
   top:0;
@@ -20,8 +19,24 @@ h1,h2,h3,h4,h5,h6,p{
   clear:both;
 }
 
-.note{
+.note1{
   background:rgba(255,255,255,.666);
   padding:3em;
   border-radius: 10%;
+  margin-top:333px;
+  padding:6em;
+}
+
+.premisebox, .fiatbox{
+  font-size: small;
+  background:silver;
+  position:absolute;
+  border-radius:10%;
+  border-style:solid;
+  border-color: black;
+  padding:2em;
+}
+
+#welcomestar{
+  background:blue;
 }
