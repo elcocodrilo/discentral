@@ -3,6 +3,8 @@ request = require 'superagent' #ajax with less suck
 
 # We listen for a submition event on the form then prevent
 # the default and do our own thing.
+
+
 $('form').on 'submit', (e)->
   e.preventDefault()
 
@@ -15,3 +17,17 @@ $('form').on 'submit', (e)->
     .send payload
       .end (err,res)->
         document.cookie="token=#{res.body.token}" if res.body.token?
+
+
+# hover animation
+$('.fiat').hover ()->
+# mouse enter
+  $(@).append """
+    <h6>
+      A formal authorization or proposition; a decree: adopting a legislative review program, rather than trying to regulate by fiat
+    </h6>
+""",
+# mouse leave
+  ()->
+    $(@).empty()
+    $(@).append 'fiat.'
