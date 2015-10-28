@@ -26,8 +26,9 @@ htmlTemplate = ()->
       div class:'define five columns note1',->
         p "In the past politicians provided a meaningful way for distant regions of our vast country to express legitimate concerns. It was essential to our democracy for distant regions to influence federal decisions."
         p "Now, the majority of representatives vote on a party line, which often caters to the <i>parties electoral interests</i> above all else. "
-
-  script src:"http://www.socket.io/socket.io.js"
+  div class:'chatbox'
+  div class:'chatin', ->
+    input type:'textbox',name:'speech'
   script src:"http://localhost:5555/bundle.js"
 
 # render html with:

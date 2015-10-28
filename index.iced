@@ -11,7 +11,6 @@ io = require('socket.io')(http)
 io.on 'connection', ()->
   log.info 'Connected!'
 
-console.log io
 # express middleware modules
 bodyParser  = require 'body-parser'
 cookieParser = require 'cookie-parser'
@@ -49,9 +48,7 @@ mongo.connect (config.get 'db'), (database_error,db)->
       log.req "Response Time Log",
         time:time
         method:req.method
-        headers:req.headers
         url : req.path
-        body : req.body
 
 # json from frontend via superagent
   app.use bodyParser.json()

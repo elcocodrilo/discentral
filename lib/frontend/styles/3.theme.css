@@ -40,3 +40,28 @@ h1,h2,h3,h4,h5,h6,p{
 #welcomestar{
   background:blue;
 }
+
+
+.chatin{
+  position:fixed;
+  width:500px;
+  height:100px;
+  padding:2em;
+  margin-top:0;
+  right:0;
+  top:0;
+}
+
+.chatbox li{
+  padding:.7em;
+}
+
+.chatbox{
+  position:fixed;
+  bottom:0;
+  right:0;
+  width:500px;
+  height: 500px;
+  background:rgba(0,0,0,.8);
+  color:white;
+}

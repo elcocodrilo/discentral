@@ -1,10 +1,12 @@
 log = require '../logging/log.iced'
-dataform = require '../frontend/dataform.iced'
+messageHtml = require '../frontend/messages.iced'
 
 module.exports = transferController = (app)->
-    log.info "Initializing Forum Controller"
+    log.info "Initializing Chat Controller"
 
-    app.get '/forum', (req,res)->
-      res.send dataform '~~~~' , post:'textbox'
+    test = messageHtml 'testy te'
+    app.get '/chat', (req,res)->
+      log.warn "warning", test
+      res.send  test
 
     # app.post '/transfer/:country/:cashout', (req,res)-> TODO
