@@ -3,7 +3,7 @@ request = require 'superagent' #ajax with less suck
 
 # We listen for a submition event on the form then prevent
 # the default and do our own thing.
-
+console.log io
 
 $('form').on 'submit', (e)->
   e.preventDefault()

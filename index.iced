@@ -1,10 +1,17 @@
 # Application utilities
+log = require './lib/logging/log.iced'
 config = require 'config'
 
-# express application
+# Webserver objects
 express = require 'express'
 app = express()
+http = require('http').createServer(app)
+io = require('socket.io')(http)
 
+io.on 'connection', ()->
+  log.info 'Connected!'
+
+console.log io
 # express middleware modules
 bodyParser  = require 'body-parser'
 cookieParser = require 'cookie-parser'
@@ -15,12 +22,10 @@ serveStatic = require 'serve-static'
 # custom express middleware modules
 authMiddleware = require './lib/modules/authMiddleware.iced'
 
-# mongo logs
-log = require './lib/logging/log.iced'
 
 # route controllers
 loginController = require './lib/controllers/loginCtrl.iced'   # Create token
-forumController = require './lib/controllers/forumCtrl.iced'
+chatController = require './lib/controllers/chatCtrl.iced'
 
 # html pages
 index = require './lib/frontend/index.iced'
@@ -32,7 +37,7 @@ mongo.connect (config.get 'db'), (database_error,db)->
 # Once we connect to the database we can configure the application:
 # with database connections to collections:
   membersdb = db.collection 'members' # for authentication
-  forumdb = db.collection 'forum'     # forum manager
+  chatdb = db.collection 'chat'     # forum
 
 # Configure the express application; order is VERY important;
   app.use favicon(__dirname + '/lib/frontend/public/favicon.ico')
@@ -56,7 +61,7 @@ mongo.connect (config.get 'db'), (database_error,db)->
 
 # controllers for functionality, must pass database object
   loginController  app , membersdb
-  forumController app  , forumdb
+  chatController app  , chatdb
 
 # Return the frontend
   app.get '/' , (req,res)->
