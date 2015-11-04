@@ -21,7 +21,7 @@ $('form').on 'submit', (e)->
 $('.fiat').hover ()->
 # mouse enter
   $(@).append """
-  <div class="fiatbox">
+  <div class="defbox">
     <h3>
     fi·at mon·ey
     </h3>
@@ -39,10 +39,29 @@ $('.fiat').hover ()->
     $(@).append 'fiat money.'
 
 
+
+# hover animation
+$('.disint').hover ()->
+# mouse enter
+  $(@).append """
+  <div class="defbox">
+    <h3>
+      Dis-inter-mediate
+    </h3>
+    <p>1. <strike>In finance,</strike> withdrawal of funds from intermediary financial institutions, such as banks and savings and loan associations, <strike> in order to invest them directly.</strike></p>
+    <p>2. Generally, removing the middleman or intermediary.</p>
+  </div>
+    """
+,
+# mouse leave
+  ()->
+    $(@).empty()
+    $(@).append 'disintermediation'
+
 $('.premise').hover ()->
 # mouse enter
   $(@).append """
-  <div class="premisebox">
+  <div class="defbox">
     <h3>
       prem·ise
     </h3>

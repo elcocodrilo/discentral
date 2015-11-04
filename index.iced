@@ -31,16 +31,16 @@ index = require './lib/frontend/index.iced'
 
 # database
 mongo = require 'mongodb'
-mongo.connect (config.get 'db'), (database_error,db)->
-  return log.error 'Database error', {database_error} if database_error
-# Once we connect to the database we can configure the application:
-# with database connections to collections:
+mongo.connect (config.get 'db'), (err,db)->
+  if err? then log.error {err}; return;
+# Once we connect to the database we can configure the
+# application with database collections:
   membersdb = db.collection 'members' # for authentication
-  chatdb = db.collection 'chat'     # forum
+  chatdb = db.collection 'chat'
 
 # Configure the express application; order is VERY important;
-  app.use favicon(__dirname + '/lib/frontend/public/favicon.ico')
-  app.use serveStatic(__dirname+'/lib/frontend/public') # serve static, css, js files from here
+  app.use favicon __dirname+'/lib/frontend/public/favicon.ico'
+  app.use serveStatic __dirname+'/lib/frontend/public' # serve static, css, js files from here
   app.use cookieParser() # populate req.cookies
 
 # performance monitor, request logger

@@ -19,7 +19,7 @@ h1,h2,h3,h4,h5,h6,p{
   clear:both;
 }
 
-.note1{
+.note1, .note2{
   background:rgba(255,255,255,.666);
   padding:3em;
   border-radius: 10%;
@@ -27,7 +27,7 @@ h1,h2,h3,h4,h5,h6,p{
   padding:6em;
 }
 
-.premisebox, .fiatbox{
+.defbox{
   font-size: small;
   background:silver;
   position:absolute;
@@ -35,14 +35,21 @@ h1,h2,h3,h4,h5,h6,p{
   border-style:solid;
   border-color: black;
   padding:2em;
+  max-width: 400px;
 }
 
 #welcomestar{
   background:blue;
 }
 
+.panel{
+  background:white;
+  padding:2em;
+
+}
 
 .chatin{
+  display:none;
   position:fixed;
   width:500px;
   height:100px;
@@ -57,6 +64,7 @@ h1,h2,h3,h4,h5,h6,p{
 }
 
 .chatbox{
+  display:none;
   position:fixed;
   bottom:0;
   right:0;
