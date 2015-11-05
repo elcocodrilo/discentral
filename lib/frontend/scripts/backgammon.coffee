@@ -72,6 +72,7 @@ class Backgammon
     @board[11] =  5
     @board[12] = -5
 
+
   move: (team, position, di)->
     o = 1
     if team is 'black'
@@ -157,8 +158,8 @@ class Backgammon
         if @isBlocked team, di
           console.log 'blocked'
           return false
-        if @isVulnerable team , di
-          @board[di] = 0
+        if @isVulnerable team , (di-1)
+          @board[di-1] = 0
           @jailem team
 
         @jail[0] -= 1
@@ -167,7 +168,7 @@ class Backgammon
         if @isBlocked team, (24-di)
           console.log 'blocked'
           return false
-        @jail[0] -= 1
+        @jail[1] -= 1
         @board[di] += 1
     @display()
     return true
@@ -185,15 +186,46 @@ class Backgammon
     @turn *= -1
     console.log @dice
 
+  canRollOff: (team)->
+    console.log 'checking if able to roll off board'
+    switch team
+      when 'white'
+        console.log 'checking white'
+        if @jail[0] == 0
+          console.log 'not in jail'
+          i = 0
+          sum = 0
+          while i <= 17
+            console.log i
+            if @board[i] > 0
+              console.log 'can\'t roll off!'
+              return false
+            i++
+        console.log 'can roll off!'
+        return true
+
+      when 'black'
+        if @jail[1] == 0
+          i = 6
+          sum = 0
+          while  i <= 23
+            if @board[i] < 0
+              console.log 'can\'t roll off!'
+              return false
+            i++
+        console.log 'can roll off!'
+        return true
 
 
 x = new Backgammon('dave', 'fred')
-x.roll()
-###
+x.canRollOff 'white'
+
 x.move 'white', 18, 3
 x.move 'white', 16, 5
 x.move 'black' , 23, 1
 x.move 'black', 23, 6
 x.move 'white', 0, 4
 x.move 'black', 5,1
-###
+x.move 'black', 23, 10
+x.move 'black', 22, 1
+x.move 'white', 22, 1
