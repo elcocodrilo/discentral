@@ -162,29 +162,48 @@ class Backgammon
           @board[di-1] = 0
           @jailem team
 
+        if (@isBlocked 'white', di-1)
+          return false
+
         @jail[0] -= 1
-        @board[di] += 1
+        @board[di-1] += 1
       when 'black'
         if @isBlocked team, (24-di)
           console.log 'blocked'
           return false
         @jail[1] -= 1
-        @board[di] += 1
+
+        if @isVulnerable team , (di-1)
+          @board[di-1] = 0
+          @jailem team
+
+
+        if (@isBlocked 'black', 24-di)
+          return false
+
+        @board[24-di] -= 1
+
     @display()
     return true
 
   display:()->
-    console.log @board
-    console.log @jail
+    #x = [0..23]
+    #y = new Array(24).fill(0)
+    #for i in x
+    #  y[i]=i
+    #console.log 'board:', y
+    console.log 'board:' , @board
+    console.log 'Jail:' , @jail
 
   roll: ()->
+    @dice = []
     @dice.push (Math.floor(Math.random()*6) + 1)
     @dice.push (Math.floor(Math.random()*6) + 1)
     if @dice[0] == @dice[1]
       @dice.push @dice[0]
       @dice.push @dice[0]
     @turn *= -1
-    console.log @dice
+    console.log 'dice:' , @dice
 
   canRollOff: (team)->
     console.log 'checking if able to roll off board'
@@ -218,14 +237,40 @@ class Backgammon
 
 
 x = new Backgammon('dave', 'fred')
-x.canRollOff 'white'
 
-x.move 'white', 18, 3
-x.move 'white', 16, 5
-x.move 'black' , 23, 1
-x.move 'black', 23, 6
-x.move 'white', 0, 4
-x.move 'black', 5,1
-x.move 'black', 23, 10
-x.move 'black', 22, 1
-x.move 'white', 22, 1
+x.roll() # 5 5
+x.display()
+x.move 'black',12 , 5
+x.move 'black',12, 5
+x.move 'black',12 , 5
+x.move 'black',12 , 5
+x.move 'white',11, 2
+x.move 'white',13, 3
+x.move 'black',7 , 5
+x.move 'black',5 , 2
+x.move 'white',0, 3
+x.move 'white',11, 1
+x.escape 'black', 4
+x.move 'white',0, 2
+x.move 'white',2, 6
+x.escape 'black' , 3
+x.move 'white',16, 2
+x.move 'white',11, 1
+x.escape 'black' , 3
+x.move 'black', 23, 1
+x.move 'white',3, 1
+x.move 'white',4, 4
+x.move 'black', 5, 4
+x.move 'black', 7, 6
+x.move 'white',11, 1
+x.move 'white',11, 5
+x.move 'black', 5, 3
+x.move 'black', 7, 5
+x.move 'white',18, 2
+x.move 'white',12, 1
+x.escape 'black', 1
+x.move 'black' , 22, 2
+x.escape 'white', 3
+x.move 'black',23, 6
+x.move 'black',23, 4
+x.roll()
