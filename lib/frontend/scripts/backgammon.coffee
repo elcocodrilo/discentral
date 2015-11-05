@@ -56,6 +56,8 @@ class Backgammon
     @board = new Array(24).fill(0)
     @jail = new Array(2).fill(0)
     @off = new Array(2).fill(0)
+    @dice = []
+    @turn = 1
 
     # initialize the opening position (see backgammon rules)
     @board[23] = -2
@@ -89,7 +91,6 @@ class Backgammon
     if @isVulnerable team , (position + di)
       @board[position+di] = 0
       @jailem team
-
 
     @board[position] -= o
     @board[position+di] += o
@@ -175,13 +176,24 @@ class Backgammon
     console.log @board
     console.log @jail
 
+  roll: ()->
+    @dice.push (Math.floor(Math.random()*6) + 1)
+    @dice.push (Math.floor(Math.random()*6) + 1)
+    if @dice[0] == @dice[1]
+      @dice.push @dice[0]
+      @dice.push @dice[0]
+    @turn *= -1
+    console.log @dice
+
+
 
 x = new Backgammon('dave', 'fred')
+x.roll()
+###
 x.move 'white', 18, 3
 x.move 'white', 16, 5
 x.move 'black' , 23, 1
 x.move 'black', 23, 6
 x.move 'white', 0, 4
 x.move 'black', 5,1
-x.escape 'white', 4
-x.move 'black', 5,1
+###
