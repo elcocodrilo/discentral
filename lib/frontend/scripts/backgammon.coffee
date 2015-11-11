@@ -60,17 +60,17 @@ class Backgammon
     @turn = 1
 
     # initialize the opening position (see backgammon rules)
-    @board[23] = -2
-    @board[0]  =  2
+  #  @board[23] = -2
+  #  @board[0]  =  2
 
     @board[5]  = -5
     @board[18] =  5
 
-    @board[7]  = -3
-    @board[16] =  3
+  #  @board[7]  = -3
+  #  @board[16] =  3
 
-    @board[11] =  5
-    @board[12] = -5
+  #  @board[11] =  5
+  #  @board[12] = -5
 
 
   move: (team, position, di)->
@@ -233,44 +233,42 @@ class Backgammon
               return false
             i++
         console.log 'can roll off!'
-        return true
+
+  rollOff: (team, dice)->
+    console.log 'rolling to take pieces off the board'
+    if @canRollOff team
+      switch team
+        when 'white'
+          console.log "'White is rolling off.#{dice}'"
+          if @isHeld team, (24 - dice)
+            @board[24 - dice] -= 1
+            @display()
+            console.log 'White rolls one off!'
+        when 'black'
+          console.log 'Black is rolling off.'
+          if @isHeld team, (dice - 1)
+            @board[ dice - 1] += 1; return true
+          return false
+    return false
+
+
+    # Check if a roll off is permitted using canRollOff
+
+    # If a roll off is permitted check if there is a mandatory piece which must be taken off
+    # either the roll of the dice corrosponds exactly to a piece to be taken off
+    # or the roll of the dice is greater than the furtherest piece from the board,
+    # For example, all remaining pieces are requiring 4 or less to roll off and you roll a 6
+    # you remove a piece furtherest from the end
+
+    # If a roll off is permitted, but there is no mandartoy piece which must be taken off
+    # then the move function is used
+
+
+
 
 
 x = new Backgammon('dave', 'fred')
 
-x.roll() # 5 5
+
+x.rollOff('white', 6)
 x.display()
-x.move 'black',12 , 5
-x.move 'black',12, 5
-x.move 'black',12 , 5
-x.move 'black',12 , 5
-x.move 'white',11, 2
-x.move 'white',13, 3
-x.move 'black',7 , 5
-x.move 'black',5 , 2
-x.move 'white',0, 3
-x.move 'white',11, 1
-x.escape 'black', 4
-x.move 'white',0, 2
-x.move 'white',2, 6
-x.escape 'black' , 3
-x.move 'white',16, 2
-x.move 'white',11, 1
-x.escape 'black' , 3
-x.move 'black', 23, 1
-x.move 'white',3, 1
-x.move 'white',4, 4
-x.move 'black', 5, 4
-x.move 'black', 7, 6
-x.move 'white',11, 1
-x.move 'white',11, 5
-x.move 'black', 5, 3
-x.move 'black', 7, 5
-x.move 'white',18, 2
-x.move 'white',12, 1
-x.escape 'black', 1
-x.move 'black' , 22, 2
-x.escape 'white', 3
-x.move 'black',23, 6
-x.move 'black',23, 4
-x.roll()
